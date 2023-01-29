@@ -1,0 +1,219 @@
+/* the syntax of css
+
+CSS rule set                   
+(
+                .classSelctor {
+declaration       property:value
+                }
+)
+attributes are 
+                    
+*/
+
+
+/* The * is the universal selector, it selects all elements on a webpage */
+* {
+    /* box-sizing is used to control the size and layout of an elements box
+    border-box sets the elements height and width properties to include the elements content,
+    padding and border. This sets the size of the webpages and doesn't allow the contents sizing 
+    to dictate the size of the whole webpage.*/
+    box-sizing: border-box;
+    /* The padding and margin properties are used to control the space around an element.
+    Both the padding and the margins can style all sides of the element: top, right, bottom, left.
+    A specific side can be styled individually by using margin-left or padding-right
+    Padding is used to add space within an element, between the content and its border. 
+    here it is set to 0 meaning that there is no space between the border and the contents on all 
+    sides of the content.*/
+    padding: 0;
+    /* Margins are used to add space outside of an element, this is the space between one element 
+    and the other elements. 
+    Here the margin on all sides is set to 0 meaning that there is no space between elements */
+    margin: 0;
+}
+
+body {
+    /* background-color sets the color of the background for the container body and all of the 
+    elements in the body element */
+    background-color: #d9dcd6;
+}
+
+/* Classes assigned on the HTML file can be select in the stylesheets by using .'className' in 
+this example the class name is header and to select it use a .before the class name; .header
+
+another selector that can be used is an id, this is unique and can only be used once. In CSS
+ this selector is called by using a # in front of the id name; #'idName' */
+
+/* Properties can be added to multiple of class selectors by putting a ',' between the class names.
+Here two selectors share the same properties by using the selectors .header, .footer */
+.header, .footer {
+    /* font-family is used to specify the typeface of the elements text, because there are 
+    multiple of operation systems and devices, by providing multiple typeface it allows the 
+    browser to use that first font that is available. The developer to have control of how 
+    the website will look on multiple of devices.
+    Here the browser will try to load the first font, Trebuchet Ms, and if that doesn't 
+    work for the device it will work its way through the list of fonts until it gets to the 
+    default, sans-serif. */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.header {
+    padding: 20px;
+    background-color: #046490;
+    /* The color property sets the text color, here it uses a hex code, #ffffff, to assign the 
+    text color to white.  */
+    color: #ffffff;
+}
+
+/* Here the selector is the class name header and its child element H1, this will only style 
+the H1 element in the header element. */
+.header h1 {
+    /* The display property is used to set the type of layout an element should use. Display property sets the H1 element to the value to inline-block, this means the element 
+    will be placed inline with the text, but will have its own width and height like a block element. 
+    This alines the H1 'Horiseon' with the rest of the element, Header's content, a list of links */
+    display: inline-block;
+    /* font-size changes the font size of the text.
+    Here the text is set to a size of 48px.  */
+    font-size: 48px;
+}
+/* This class a nested elements. In the parent element header there is a nested element called H1 and 
+in that element is the element called seo. This is to style the element seo but the parent elements 
+needs to be selected so that the correct elements is selected. */
+.header h1 .seo {
+    color: #d9dcd6;
+}
+
+.header div {
+    padding-top: 15px;
+    margin-right: 20px;
+    /* The float property sets an elements position. float right sets the elements position to the 
+    right of the container, float left positions the element to the left of its container. */
+    float: right;
+    font-size: 20px;
+}
+
+.header div ul {
+    /* This property is used to set the style of the bullet points, here none means that the 
+    listed items do not have any bullet points, just a list. */
+    list-style-type: none;
+}
+
+.header div ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+a {
+    color: #ffffff;
+    /* There property text-decoration refers to the appearance of text: underlines, overline, 
+    and strike-through. 
+    Here there are no decorations  */
+    text-decoration: none;
+}
+
+/* The hero class defines the digital marketing meeting img */
+.hero {
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+    /* Setting the background image in the CSS file allows for flexibility, maintainability, 
+    performance of a website, and providing accessibility for users. */
+    background-image: url("../images/digital-marketing-meeting.jpg");
+    /* This determines the size of the background image, here it has the value of cover meaning 
+    it will cover the whole element  */
+    background-size: cover;
+    /* This sets the position of the background image in its element. The center value that 
+    centers the image bother horizontally and vertically.*/
+    background-position: center;
+}
+
+.float-left {
+    float: left;
+    margin-right: 25px;
+
+}
+
+.float-right {
+    float: right;
+    margin-left: 25px;
+
+}
+
+.content, .benefits {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.content {
+    /* The properties, hight and width, set the dimensions of block elements. If the size
+    of the element is larger than the size of the dimensions, then the content can become obscured 
+    or overflows its container. The property 'overflow' can be used to control how the content is 
+    displayed. There are a few values that control how it is displayed. */
+
+    /* Width is set to 75% of its parent container*/
+    width: 75%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.benefits {
+    margin-right: 20px;
+    padding: 20px;
+    clear: both;
+    float: right;
+    width: 20%;
+    /* Here the height is set to 100% of its parent container */
+    height: 100%;
+    background-color: #4773aa;
+    color: #ffffff;
+}
+
+.benefits img {
+    /* Here the display property has a value of block which sets 
+    the element layout to be treated as a block element, it will 
+    take up the full width of the parent container */
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+
+.benefits h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.benefits p {
+    margin-bottom: 32px;
+}
+
+.mana-mark-opt {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    background-color: #046490;
+    color: #ffffff;
+}
+
+.content img {
+    /* Here the max-height property is say that the height of the image can not exceed 200px */
+    max-height: 200px;
+}
+
+.content h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.footer {
+    padding: 30px;
+    /* The clear property tells an element how it should behave when two elements are floated 
+    on the same page. The value both makes it so that the element will not be positioned next 
+    to any floated element on either side of the page */
+    clear: both;
+    /* The text align property tells the text inside of an element how it should be aligned 
+    horizontally. The center value aligns the text with the center within the element */
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 20px;
+}
