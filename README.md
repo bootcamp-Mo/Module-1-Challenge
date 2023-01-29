@@ -24,3 +24,6 @@ THEN I find a concise, descriptive title
 ## Application
 
 This webpage is for the marketing company Horiseon, the task was to make the website more accessible and revome redunednt code. 
+
+![alt text](https://github.com/bootcamp-Mo/Module-1-Challenge/blob/main/assets/images/screenshot%20website%201.png)
+![alt text](https://github.com/bootcamp-Mo/Module-1-Challenge/blob/main/assets/images/screenshot%20website%202.png)
